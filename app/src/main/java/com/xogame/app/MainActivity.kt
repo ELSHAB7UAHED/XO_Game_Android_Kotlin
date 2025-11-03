@@ -1,25 +1,16 @@
 package com.xogame.app
 
 import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 
 class MainActivity : Activity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setupClickListeners()
+        setContentView(R.layout.activity_test)
     }
     
     private fun setupClickListeners() {
-        val btnSinglePlayer = findViewById<Button>(R.id.btnSinglePlayer)
-        val btnTwoPlayers = findViewById<Button>(R.id.btnTwoPlayers)
-        val btnSettings = findViewById<Button>(R.id.btnSettings)
-        val btnAbout = findViewById<Button>(R.id.btnAbout)
-        val btnExit = findViewById<Button>(R.id.btnExit)
-        
         btnSinglePlayer.setOnClickListener {
             // Navigate to Game Activity in Single Player mode
             val intent = Intent(this, GameActivity::class.java)
