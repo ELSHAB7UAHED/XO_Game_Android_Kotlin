@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:padding="@dimen/padding_large">
+
+    <!-- Game Result Icon -->
+    <ImageView
+        android:id="@+id/ivResultIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/trophy_icon"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp" />
+
+    <!-- Draw Icon -->
+    <ImageView
+        android:id="@+id/ivDrawIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/draw_icon"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp" />
+
+    <!-- Result Text -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_huge"
+        android:fontFamily="@font/roboto_bold"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:maxWidth="280dp"
+        app:layout_constraintTop_toBottomOf="@id/ivResultIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Winning Combination Indicator -->
+    <TextView
+        android:id="@+id/tvWinningInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_medium"
+        android:textAlignment="center"
+        android:maxWidth="280dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Score Information (for future use) -->
+    <LinearLayout
+        android:id="@+id/llScoreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/game_board_background"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvWinningInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X: "
+            android:textColor="@color/player_x_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvScoreX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="O: "
+            android:textColor="@color/player_o_color"
+            android:textSize="@dimen/text_size_medium" />
+
+        <TextView
+            android:id="@+id/tvScoreO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/new_game"
+        style="@style/MenuButton"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnMainMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnShare"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="مشاركة"
+        style="@style/MenuButton"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnMainMenu"
+        app:layout_constraintStart_toEndOf="@id/btnNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnMainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu"
+        style="@style/MenuButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
