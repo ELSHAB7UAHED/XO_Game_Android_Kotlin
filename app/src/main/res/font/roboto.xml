@@ -3,9 +3,13 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/dancing_script_regular" />
+        android:font="@font/roboto_regular" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        android:font="@font/roboto_medium" />
     <font
         android:fontStyle="normal"
         android:fontWeight="700"
-        android:font="@font/dancing_script_bold" />
+        android:font="@font/roboto_bold" />
 </font-family>
