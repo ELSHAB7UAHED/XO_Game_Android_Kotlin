@@ -39,30 +39,30 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gradle-
           
-    - name: Ensure Gradle wrapper is executable
+    - name: Download and setup Gradle
       run: |
-        ls -la
-        if [ -f "gradlew" ]; then
-          chmod +x gradlew
-        else
-          echo "gradlew not found, creating it..."
-          # Create a minimal gradlew script
-          cat > gradlew << 'EOF'
-#!/bin/bash
-GRADLE_OPTS="$GRADLE_OPTS -Xmx2048M -Dfile.encoding=UTF-8"
-export JAVA_HOME="$JAVA_HOME_17_X64"
-export ANDROID_HOME="$ANDROID_HOME"
-cd "$(dirname "$0")"
-exec java -Dorg.gradle.appname=gradlew -classpath "$(find . -name 'gradle-wrapper.jar')" org.gradle.wrapper.GradleWrapperMain "$@"
-EOF
-          chmod +x gradlew
-        fi
-          
-    - name: Build with Gradle
-      run: ./gradlew assembleDebug
+        mkdir -p $HOME/.gradle/wrapper/dists/gradle-8.0-bin
+        cd $HOME/.gradle/wrapper/dists/gradle-8.0-bin
+        # Download Gradle 8.0
+        wget -q https://services.gradle.org/distributions/gradle-8.0-bin.zip -O gradle-8.0-bin.zip
+        unzip -q gradle-8.0-bin.zip
+        # Create symlink
+        ln -sf gradle-8.0 gradle
+        export PATH="$HOME/.gradle/wrapper/dists/gradle-8.0-bin/gradle/bin:$PATH"
+        gradle --version
       env:
-        ANDROID_HOME: ${{ runner.tool_cache }}/android-sdk
-        ANDROID_SDK_ROOT: ${{ runner.tool_cache }}/android-sdk
+        JAVA_HOME: /opt/temurin/java-17-openjdk-amd64
+        
+    - name: Build with Gradle
+      run: |
+        export PATH="$HOME/.gradle/wrapper/dists/gradle-8.0-bin/gradle/bin:$PATH"
+        export JAVA_HOME=/opt/temurin/java-17-openjdk-amd64
+        export ANDROID_HOME=/usr/local/lib/android/sdk
+        export ANDROID_SDK_ROOT=/usr/local/lib/android/sdk
+        gradle assembleDebug
+      env:
+        ANDROID_HOME: /usr/local/lib/android/sdk
+        ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         JAVA_HOME: /opt/temurin/java-17-openjdk-amd64
         
     - name: Upload APK artifact
