@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:padding="@dimen/padding_large">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvStatisticsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="الإحصائيات"
+        android:textColor="@color/neon_blue"
+        android:textSize="@dimen/text_size_huge"
+        android:fontFamily="@font/roboto_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Total Games Card -->
+    <LinearLayout
+        android:id="@+id/llTotalGames"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/game_board_background"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvStatisticsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="إجمالي الألعاب"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tvTotalGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/neon_blue"
+            android:textSize="@dimen/text_size_extra_large"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Win Statistics Row -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/llTotalGames"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Player Wins Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/game_board_background"
+            android:padding="@dimen/padding_medium"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="انتصاراتك"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_size_small"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tvPlayerWins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/player_x_color"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Computer Wins Card -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/game_board_background"
+            android:padding="@dimen/padding_medium"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="انتصارات الكمبيوتر"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/text_size_small"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tvComputerWins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/player_o_color"
+                android:textSize="@dimen/text_size_large"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Draws Card -->
+    <LinearLayout
+        android:id="@+id/llDraws"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/game_board_background"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/llTotalGames"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="التعادل"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_medium"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tvDraws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/text_size_large"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Win Rates Section -->
+    <LinearLayout
+        android:id="@+id/llWinRates"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/game_board_background"
+        android:padding="@dimen/padding_medium"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/llDraws"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="معدلات الفوز"
+            android:textColor="@color/neon_blue"
+            android:textSize="@dimen/text_size_large"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Player Win Rate -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="معدل انتصارك:"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvWinRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:textColor="@color/success_green"
+                android:textSize="@dimen/text_size_medium"
+                android:fontFamily="@font/roboto_bold" />
+        </LinearLayout>
+
+        <!-- Computer Win Rate -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="معدل انتصار الكمبيوتر:"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvComputerWinRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:textColor="@color/error_red"
+                android:textSize="@dimen/text_size_medium"
+                android:fontFamily="@font/roboto_bold" />
+        </LinearLayout>
+
+        <!-- Draw Rate -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="معدل التعادل:"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvDrawRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0%"
+                android:textColor="@color/warning_yellow"
+                android:textSize="@dimen/text_size_medium"
+                android:fontFamily="@font/roboto_bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="إعادة تعيين"
+        style="@style/MenuButton"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnShare"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="مشاركة"
+        style="@style/MenuButton"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnBack"
+        app:layout_constraintStart_toEndOf="@id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="رجوع"
+        style="@style/MenuButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
