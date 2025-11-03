@@ -1,6 +1,7 @@
 package com.xogame.app
 
 import android.content.SharedPreferences
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView

@@ -1,6 +1,7 @@
 package com.xogame.app
 
 import android.content.SharedPreferences
+import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.RadioButton
@@ -22,21 +23,36 @@ class SettingsActivity : AppCompatActivity() {
     
     companion object {
         private const val PREFS_NAME = "game_settings"
-        private const val DIFFICULTY_KEY = "difficulty"
-        private const val SOUND_EFFECTS_KEY = "sound_effects"
-        private const val BACKGROUND_MUSIC_KEY = "background_music"
+        
+        // Constants for shared preferences keys
+        const val DIFFICULTY_KEY = "difficulty"
+        const val SOUND_EFFECTS_KEY = "sound_effects"
+        const val BACKGROUND_MUSIC_KEY = "background_music"
         
         // Difficulty levels
         const val DIFFICULTY_EASY = "easy"
         const val DIFFICULTY_MEDIUM = "medium"
         const val DIFFICULTY_HARD = "hard"
+        
+        // Helper methods
+        fun getDifficulty(preferences: SharedPreferences): String {
+            return preferences.getString(DIFFICULTY_KEY, DIFFICULTY_MEDIUM) ?: DIFFICULTY_MEDIUM
+        }
+        
+        fun isSoundEffectsEnabled(preferences: SharedPreferences): Boolean {
+            return preferences.getBoolean(SOUND_EFFECTS_KEY, true)
+        }
+        
+        fun isBackgroundMusicEnabled(preferences: SharedPreferences): Boolean {
+            return preferences.getBoolean(BACKGROUND_MUSIC_KEY, false)
+        }
     }
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
         
-        sharedPreferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         
         initializeViews()
         loadSettings()
@@ -106,19 +122,5 @@ class SettingsActivity : AppCompatActivity() {
         editor.putBoolean(BACKGROUND_MUSIC_KEY, switchBackgroundMusic.isChecked)
         
         editor.apply()
-    }
-    
-    companion object {
-        fun getDifficulty(preferences: SharedPreferences): String {
-            return preferences.getString(DIFFICULTY_KEY, DIFFICULTY_MEDIUM) ?: DIFFICULTY_MEDIUM
-        }
-        
-        fun isSoundEffectsEnabled(preferences: SharedPreferences): Boolean {
-            return preferences.getBoolean(SOUND_EFFECTS_KEY, true)
-        }
-        
-        fun isBackgroundMusicEnabled(preferences: SharedPreferences): Boolean {
-            return preferences.getBoolean(BACKGROUND_MUSIC_KEY, false)
-        }
     }
 }

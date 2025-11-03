@@ -17,7 +17,7 @@ class GameManager {
         IN_PROGRESS, WON_X, WON_O, DRAW
     }
     
-    // Current game state
+    // Current game state - استخدام var بدلاً من val للمتغيرات القابلة للتعديل
     private var gameBoard: Array<Array<String>> = Array(3) { Array(3) { "" } }
     private var currentPlayer = "X"
     private var gameState = GameState.IN_PROGRESS

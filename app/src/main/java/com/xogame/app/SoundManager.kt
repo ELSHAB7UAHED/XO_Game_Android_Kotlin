@@ -55,20 +55,14 @@ class SoundManager(private val context: Context) {
             soundPool = SoundPool(5, AudioManager.STREAM_MUSIC, 0)
         }
         
-        // Load sound effects (using system sounds for now)
+        // Load sound effects (no system sounds for now)
         // In a real app, you'd load your custom sound files here
         loadSoundEffects()
     }
     
     private fun loadSoundEffects() {
-        // Note: Using system sounds for demonstration
-        // In production, you would load actual sound files
-        soundMap[SOUND_CLICK] = soundPool.load(context, android.R.raw.beep_short, 1)
-        soundMap[SOUND_MOVE] = soundPool.load(context, android.R.raw.beep_short, 1)
-        soundMap[SOUND_WIN] = soundPool.load(context, android.R.raw.beep_long, 1)
-        soundMap[SOUND_LOSE] = soundPool.load(context, android.R.raw.beep_long, 1)
-        soundMap[SOUND_DRAW] = soundPool.load(context, android.R.raw.beep_short, 1)
-        soundMap[SOUND_BUTTON_PRESS] = soundPool.load(context, android.R.raw.beep_short, 1)
+        // Note: No system sounds loading to avoid unresolved references
+        // In production, you would load actual sound files from res/raw/ or assets/
         
         soundPool.setOnLoadCompleteListener { _, id, status ->
             if (status == 0) {
