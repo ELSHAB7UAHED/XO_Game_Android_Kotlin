@@ -52,18 +52,25 @@ jobs:
         gradle --version
       env:
         JAVA_HOME: /opt/temurin/java-17-openjdk-amd64
+        JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
+        ANDROID_HOME: /usr/local/lib/android/sdk
+        ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
     - name: Build with Gradle
       run: |
         export PATH="$HOME/.gradle/wrapper/dists/gradle-8.0-bin/gradle/bin:$PATH"
-        export JAVA_HOME=/opt/temurin/java-17-openjdk-amd64
+        export JAVA_HOME=/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
         export ANDROID_HOME=/usr/local/lib/android/sdk
         export ANDROID_SDK_ROOT=/usr/local/lib/android/sdk
-        gradle assembleDebug
+        ./gradlew assembleDebug
       env:
+        JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
+        JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
         ANDROID_HOME: /usr/local/lib/android/sdk
         ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
-        JAVA_HOME: /opt/temurin/java-17-openjdk-amd64
         
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
