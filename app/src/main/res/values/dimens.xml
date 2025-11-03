@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Button Dimensions -->
+    <dimen name="button_corner_radius">12dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_margin">16dp</dimen>
+    <dimen name="button_padding">16dp</dimen>
+    
+    <!-- Game Board Dimensions -->
+    <dimen name="game_cell_size">80dp</dimen>
+    <dimen name="game_cell_margin">4dp</dimen>
+    <dimen name="game_board_padding">24dp</dimen>
+    
+    <!-- Card Dimensions -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    
+    <!-- Text Dimensions -->
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    
+    <!-- Spacing Dimensions -->
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_extra_large">32dp</dimen>
+    
+    <!-- Menu Dimensions -->
+    <dimen name="menu_item_height">56dp</dimen>
+    <dimen name="menu_item_padding">16dp</dimen>
+    
+    <!-- Game Piece Dimensions -->
+    <dimen name="game_piece_size">60dp</dimen>
+    <dimen name="game_piece_stroke_width">3dp</dimen>
+    
+    <!-- Window Dimensions -->
+    <dimen name="window_padding">16dp</dimen>
+    <dimen name="window_margin">8dp</dimen>
+</resources>
