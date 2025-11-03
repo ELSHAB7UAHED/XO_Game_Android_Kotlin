@@ -4,15 +4,15 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@android:font/roboto_regular" />
+        android:font="sans-serif" />
     <!-- Medium weight using system font -->
     <font
         android:fontStyle="normal"
         android:fontWeight="500"
-        android:font="@android:font/roboto_medium" />
+        android:font="sans-serif-medium" />
     <!-- Bold weight using system font -->
     <font
         android:fontStyle="normal"
         android:fontWeight="700"
-        android:font="@android:font/roboto_bold" />
+        android:font="sans-serif" />
 </font-family>
