@@ -19,6 +19,7 @@
     <!-- Text Dimensions -->
     <dimen name="text_size_huge">32sp</dimen>
     <dimen name="text_size_extra_large">28sp</dimen>
+    <dimen name="text_size_mega">40sp</dimen>
     <dimen name="text_size_large">24sp</dimen>
     <dimen name="text_size_medium">18sp</dimen>
     <dimen name="text_size_small">14sp</dimen>
