@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary_blue">#2196F3</color>
+    <color name="primary_blue_light">#64B5F6</color>
+    <color name="primary_blue_dark">#1976D2</color>
+    
+    <!-- Surface Colors -->
+    <color name="surface_dark">#121212</color>
+    <color name="card_background">#1E1E1E</color>
+    
+    <!-- Background Colors -->
+    <color name="background_gradient">#1A237E</color>
+    <color name="game_board_background">#2E2E2E</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_orange">#FF9800</color>
+    <color name="accent_orange_dark">#F57C00</color>
+    
+    <!-- Game Colors -->
+    <color name="neon_blue">#00E5FF</color>
+    <color name="glass_white">#E3F2FD</color>
+    
+    <!-- Text Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#757575</color>
+    <color name="light_gray">#BDBDBD</color>
+    
+    <!-- Game Board Colors -->
+    <color name="cell_empty">#424242</color>
+    <color name="cell_x">#F44336</color>
+    <color name="cell_o">#4CAF50</color>
+    <color name="winning_cell">#FFD700</color>
+    
+    <!-- Button Colors -->
+    <color name="button_primary">#2196F3</color>
+    <color name="button_secondary">#757575</color>
+    <color name="button_success">#4CAF50</color>
+    <color name="button_danger">#F44336</color>
+    
+    <!-- Transparent Colors -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent">#80000000</color>
+</resources>
