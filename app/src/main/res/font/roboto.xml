@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Regular weight using system font -->
+    <!-- Regular weight using system font family -->
     <font
         android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="sans-serif" />
-    <!-- Medium weight using system font -->
+        android:fontWeight="400" />
+    <!-- Medium weight using system font family -->
     <font
         android:fontStyle="normal"
-        android:fontWeight="500"
-        android:font="sans-serif-medium" />
-    <!-- Bold weight using system font -->
+        android:fontWeight="500" />
+    <!-- Bold weight using system font family -->
     <font
         android:fontStyle="normal"
-        android:fontWeight="700"
-        android:font="sans-serif" />
+        android:fontWeight="700" />
 </font-family>
