@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">لعبة إكس أو</string>
+    
+    <!-- Main Activity -->
+    <string name="start_game">ابدأ اللعبة</string>
+    <string name="settings">الإعدادات</string>
+    <string name="statistics">الإحصائيات</string>
+    <string name="about">حول</string>
+    
+    <!-- Game Activity -->
+    <string name="player_turn">دور اللاعب</string>
+    <string name="ai_turn">دور الذكاء الاصطناعي</string>
+    <string name="game_in_progress">اللعبة قيد التقدم</string>
+    
+    <!-- Results -->
+    <string name="player_wins">اللاعب فاز!</string>
+    <string name="ai_wins">الذكاء الاصطناعي فاز!</string>
+    <string name="draw">تعادل!</string>
+    
+    <!-- Game Actions -->
+    <string name="new_game">لعبة جديدة</string>
+    <string name="back">عودة</string>
+    <string name="ok">موافق</string>
+    
+    <!-- Settings -->
+    <string name="game_mode">وضع اللعبة</string>
+    <string name="human_vs_ai">بشر ضد ذكاء اصطناعي</string>
+    <string name="ai_vs_ai">ذكاء اصطناعي ضد ذكاء اصطناعي</string>
+    <string name="difficulty">الصعوبة</string>
+    <string name="easy">سهل</string>
+    <string name="medium">متوسط</string>
+    <string name="hard">صعب</string>
+    <string name="sound">الصوت</string>
+    <string name="enabled">مفعل</string>
+    <string name="disabled">معطل</string>
+    
+    <!-- Statistics -->
+    <string name="total_games">إجمالي الألعاب</string>
+    <string name="player_wins_stats">انتصارات اللاعب</string>
+    <string name="ai_wins_stats">انتصارات الذكاء الاصطناعي</string>
+    <string name="draws">التعادل</string>
+    <string name="win_rate">معدل الفوز</string>
+    
+    <!-- About -->
+    <string name="version">الإصدار</string>
+    <string name="version_number">1.0</string>
+    <string name="developer">المطور</string>
+    <string name="description">لعبة إكس أو ذكية مع خوارزمية MINIMAX</string>
+    
+    <!-- Menu Items -->
+    <string name="menu_back">عودة</string>
+    <string name="menu_about">حول</string>
+    
+    <!-- Common -->
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="cancel">إلغاء</string>
+</resources>
