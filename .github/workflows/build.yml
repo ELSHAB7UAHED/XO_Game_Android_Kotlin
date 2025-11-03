@@ -43,34 +43,15 @@ jobs:
       run: |
         mkdir -p $HOME/.gradle/wrapper/dists/gradle-8.0-bin
         cd $HOME/.gradle/wrapper/dists/gradle-8.0-bin
-        # Download Gradle 8.0
         wget -q https://services.gradle.org/distributions/gradle-8.0-bin.zip -O gradle-8.0-bin.zip
         unzip -q gradle-8.0-bin.zip
-        # Create symlink
         ln -sf gradle-8.0 gradle
-        export PATH="$HOME/.gradle/wrapper/dists/gradle-8.0-bin/gradle/bin:$PATH"
-        gradle --version
-      env:
-        JAVA_HOME: /opt/temurin/java-17-openjdk-amd64
-        JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
-        ANDROID_HOME: /usr/local/lib/android/sdk
-        ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
     - name: Build with Gradle
       run: |
         export PATH="$HOME/.gradle/wrapper/dists/gradle-8.0-bin/gradle/bin:$PATH"
-        export JAVA_HOME=/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
-        export ANDROID_HOME=/usr/local/lib/android/sdk
-        export ANDROID_SDK_ROOT=/usr/local/lib/android/sdk
+        gradle wrapper
         ./gradlew assembleDebug
-      env:
-        JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
-        JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
-        ANDROID_HOME: /usr/local/lib/android/sdk
-        ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
         
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
