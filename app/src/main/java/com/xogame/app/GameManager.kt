@@ -258,11 +258,11 @@ class GameManager {
     
     // Update statistics after game ends
     fun updateStatistics() {
-        totalGames++
+        totalGames = totalGames + 1
         when (gameState) {
-            GameState.WON_X -> playerWins++
-            GameState.WON_O -> computerWins++
-            GameState.DRAW -> draws++
+            GameState.WON_X -> playerWins = playerWins + 1
+            GameState.WON_O -> computerWins = computerWins + 1
+            GameState.DRAW -> draws = draws + 1
             else -> {} // Game not over yet
         }
     }
