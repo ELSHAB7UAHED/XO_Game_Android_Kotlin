@@ -23,7 +23,7 @@ class GameManager {
     private var gameState = GameState.IN_PROGRESS
     private var difficulty = Difficulty.MEDIUM
     
-    // Game statistics
+    // Game statistics - استخدام var بدلاً من val
     private var totalGames = 0
     private var playerWins = 0
     private var computerWins = 0
@@ -256,7 +256,7 @@ class GameManager {
         return GameStatistics(totalGames, playerWins, computerWins, draws)
     }
     
-    // Update statistics after game ends
+    // Update statistics after game ends - استخدام var بشكل آمن
     fun updateStatistics() {
         totalGames = totalGames + 1
         when (gameState) {
