@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    android:padding="@dimen/padding_large">
+
+    <!-- Game Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XO"
+        android:textColor="@color/neon_blue"
+        android:textSize="@dimen/text_size_mega"
+        android:fontFamily="@font/dancing_script"
+        android:shadowColor="@color/neon_blue"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvSubtitle"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="لعبة X و O"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_large"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="60dp" />
+
+    <!-- Single Player Button -->
+    <Button
+        android:id="@+id/btnSinglePlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/single_player"
+        style="@style/MenuButton"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- Two Players Button -->
+    <Button
+        android:id="@+id/btnTwoPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/two_players"
+        style="@style/MenuButton"
+        app:layout_constraintTop_toBottomOf="@id/btnSinglePlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Settings Button -->
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        style="@style/MenuButton"
+        app:layout_constraintTop_toBottomOf="@id/btnTwoPlayers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- About Button -->
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        style="@style/MenuButton"
+        app:layout_constraintTop_toBottomOf="@id/btnSettings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Exit Button -->
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        style="@style/MenuButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Decorative Elements -->
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:alpha="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
