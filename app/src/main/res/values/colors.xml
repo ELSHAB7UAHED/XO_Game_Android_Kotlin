@@ -30,6 +30,10 @@
     <color name="gray">#757575</color>
     <color name="light_gray">#BDBDBD</color>
     
+    <!-- Player Colors -->
+    <color name="player_x_color">#F44336</color>
+    <color name="player_o_color">#4CAF50</color>
+    
     <!-- Game Board Colors -->
     <color name="cell_empty">#424242</color>
     <color name="cell_x">#F44336</color>
