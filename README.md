@@ -1,32 +1,111 @@
-# XO Game Android App - Kotlin Project
+# XO Game - Android Kotlin
 
-A professional XO (Tic-Tac-Toe) Android game built with Kotlin, featuring modern UI/UX design and advanced AI gameplay.
+لعبة X و O مبنية بتقنية Kotlin للأندرويد مع واجهة عصرية وميزات متقدمة.
 
-## Features
-- Single player vs AI (Easy, Medium, Hard)
-- Two player mode  
-- Modern Material Design UI
-- Sound effects and haptics
-- Game statistics
-- Arabic language support
-- Professional dark theme with neon accents
+## 🎮 الميزات
 
-## Setup
-1. Clone the repository
-2. Open in Android Studio
-3. Sync Gradle files  
-4. Run the app on device or emulator
+- ✅ **لعب فردي وثنائي**: اللعب ضد الحاسوب أو مع لاعب آخر
+- ✅ **واجهة عصرية**: تصميم حديث بألوان متدرجة وتأثيرات بصرية
+- ✅ **إحصائيات مفصلة**: متابعة الإنجازات والإحصائيات
+- ✅ **إعدادات قابلة للتخصيص**: تخصيص تجربة اللعب
+- ✅ **تأثيرات صوتية**: أصوات تفاعلية مع أزرار اللعبة
+- ✅ **دعم اللغة العربية**: واجهة ونصوص باللغة العربية
 
-## Requirements
-- Android Studio Arctic Fox+
-- Android SDK 24+
-- Kotlin 1.8.10+
+## 🚀 البناء والتطوير
 
-## Developer
-Ahmed Nour Ahmed - Qena, Egypt
+### GitHub Actions (الأفضل)
+البناء التلقائي لـ APK متاح عبر GitHub Actions:
+- سيبنى الـ APK تلقائياً عند الدفع إلى الفرع `main`
+- يمكن الوصول للـ APK من قائمة الـ artifacts
+- يدعم أيضاً إنشاء إصدارات عند إنشاء tags
 
-## License
-MIT License - See LICENSE file for details
+### البناء المحلي
+```bash
+# استنساخ المستودع
+git clone https://github.com/ELSHAB7UAHED/XO_Game_Android_Kotlin.git
+cd XO_Game_Android_Kotlin
+
+# بناء APK
+./gradlew assembleDebug
+
+# APK سيتوفر في:
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+### المتطلبات
+- **Java**: JDK 17
+- **Android SDK**: API Level 33
+- **Gradle**: 8.0
+- **Android Gradle Plugin**: 8.0.1
+
+## 📱 التثبيت والتشغيل
+
+1. حمل ملف `app-debug.apk`
+2. فعّل "مصادر غير معروفة" في إعدادات الهاتف
+3. ثبت التطبيق
+4. استمتع باللعبة!
+
+## 🛠️ التقنيات المستخدمة
+
+- **اللغة**: Kotlin
+- **إطار العمل**: Android SDK 33
+- **UI**: ConstraintLayout, Material Design
+- **البناء**: Gradle 8.0
+- **إدارة التبعيات**: AndroidX
+
+## 📂 بنية المشروع
+
+```
+app/src/main/
+├── java/com/xogame/app/
+│   ├── MainActivity.kt         # النشاط الرئيسي
+│   ├── GameActivity.kt         # شاشة اللعبة
+│   ├── GameManager.kt          # منطق اللعبة
+│   ├── SoundManager.kt         # إدارة الأصوات
+│   ├── StatisticsActivity.kt   # الإحصائيات
+│   ├── SettingsActivity.kt     # الإعدادات
+│   ├── AboutActivity.kt        # عن التطبيق
+│   └── ResultActivity.kt       # شاشة النتائج
+└── res/
+    ├── layout/                 # واجهات المستخدم
+    ├── drawable/               # الصور والأيقونات
+    ├── font/                   # الخطوط
+    ├── values/                 # الموارد
+    └── ...
+```
+
+## 📊 إحصائيات المشروع
+
+- **الكود**: 8 ملفات Kotlin
+- **الواجهات**: 7+ ملفات XML
+- **الموارد**: 20+ ملف
+- **خطوط الكود**: ~2000 سطر
+- **اللغات**: Kotlin, XML
+
+## 🔗 الروابط
+
+- **المستودع**: https://github.com/ELSHAB7UAHED/XO_Game_Android_Kotlin
+- **Issues**: https://github.com/ELSHAB7UAHED/XO_Game_Android_Kotlin/issues
+- **Actions**: https://github.com/ELSHAB7UAHED/XO_Game_Android_Kotlin/actions
+
+## 📄 الترخيص
+
+هذا المشروع مرخص تحت رخصة MIT - راجع ملف [LICENSE](LICENSE) للتفاصيل.
+
+## 🤝 المساهمة
+
+مرحب بالمساهمات! يرجى:
+1. إنشاء Fork للمستودع
+2. إنشاء فرع جديد للميزة
+3. إجراء التغييرات مع الاختبارات
+4. إرسال Pull Request
+
+## 📞 الدعم
+
+لأي استفسارات أو مشاكل، يرجى إنشاء Issue في المستودع.
 
 ---
-© 2025 Ahmed Nour Ahmed - All rights reserved
+
+**ملاحظة**: هذا التطبيق مبني للأغراض التعليمية والتطويرية. جميع الأخطاء XML تم إصلاحها والمشروع جاهز للبناء بنجاح.
+
+🎮 **استمتع باللعبة!** 🎮
