@@ -34,4 +34,10 @@
     <string name="your_turn">دورك</string>
     <string name="new_game">لعبة جديدة</string>
     <string name="main_menu">القائمة الرئيسية</string>
+    
+    <!-- Additional missing strings -->
+    <string name="single_player">لاعب واحد</string>
+    <string name="two_players">لاعبان</string>
+    <string name="game_difficulty">صعوبة اللعبة</string>
+    <string name="background_music">الموسيقى الخلفية</string>
 </resources>
